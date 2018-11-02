@@ -29,8 +29,12 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$tl->category_id}}</td>
                                 <td>{{$tl->category_name}}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><a href="admin/category/delete/{{$tl->category_id}}">Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/category/edit/{{$tl->category_id}}">Edit</a></td>
+                               <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('category.show',$tl)}}">Chi tiết</a></td>
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('category.destroy',$tl)}}"  style="display: inline-table;" method="POST">
+                                    {{ csrf_field() }} {{ method_field('DELETE') }}
+                                    <button type="submit" style="background: none;border: none;">Xóa</button>
+                                </form></td>
+                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('category.edit',$tl)}}">Edit</a></td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -19,7 +19,7 @@
                     		</div>
                     	@endif
                         <form action="admin/category/edit/{{$category->category_id}}" method="POST">
-                        	{{ csrf_field()}}
+                        	{{ csrf_field()}} {{method_field('PUT')}}
                             <div class="form-group">
                                 <label>Tên thể loại</label>
                                 <input class="form-control" name="category_name" value="{{$category->category_name}}" placeholder="Mời nhập tên thể loại" />

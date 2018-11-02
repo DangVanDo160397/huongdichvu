@@ -100,6 +100,6 @@ class QuestionController extends Controller
     {
         $question->delete();
         session()->flash('destroy_success');
-        return redirect()->route('provider.index')->with('thongbao','Xóa thành công.');
+        return redirect()->route('question.index')->with('thongbao','Xóa thành công.');
     }
 }

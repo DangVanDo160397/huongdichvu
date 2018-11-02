@@ -111,6 +111,30 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="{{route('slide.index')}}"><i class="fa fa-users fa-fw"></i>Slide<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{route('slide.index')}}">Danh sách Slide</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('slide.create')}}">Thêm Slide</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="{{route('parent.index')}}"><i class="fa fa-users fa-fw"></i>Thể loại gốc<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{route('parent.index')}}">Danh sách </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('parent.create')}}">Thêm</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

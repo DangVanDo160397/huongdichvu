@@ -33,7 +33,7 @@
 
         @include('admin.layouts.header')
 
-        
+        <!-- để có thể code được vào phần content -->
         @yield('content')
 
     </div>

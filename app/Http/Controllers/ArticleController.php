@@ -1,5 +1,5 @@
 <?php
-
+// tạo ra controller có 7 hàm để chúng ta thực hiện
 namespace App\Http\Controllers;
 
 use App\Article;
@@ -15,6 +15,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        //lấy ra tất cả các bản ghi của 1 bảng
         $article= Article::all();
         return view('admin.article.index',compact('article'));
     }
@@ -26,6 +27,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
+        //lấy ra view tạo 1 bản ghi
         $product = Product::all();
         return view('admin.article.add',compact('product'));
     }
@@ -38,6 +40,7 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
+        //lưu bản ghi vào cơ sở dữ liệu
         $article = new Article();
         $article->fill($request->all());
         if($request->hasFile("article_image"))
@@ -71,6 +74,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
+        //lấy ra view để hiển thị 1 bản ghi
         return view('admin.article.show',compact('article'));
     }
 
@@ -82,6 +86,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
+        //lấy ra view để sửa 1 bản ghi
         $product = Product::all();
         return view('admin.article.edit',compact('article','product'));
     }
@@ -95,6 +100,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        //cap nhap bản ghi do
         $this->validate($request,[
             'article_title' => 'required|min:3',
             'article_content' => 'required|min:3',
@@ -139,6 +145,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+        //xoa 1 bản ghi
         $article->delete();
         session()->flash('destroy_success');
         return redirect()->route('article.index')->with('thongbao','Xóa thành công.');

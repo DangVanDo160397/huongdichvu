@@ -13,7 +13,5 @@ class Category extends Model
     public function getIdAttribute(){
         return $this->attributes['category_id'];
     }
-    public function product() {
-        return $this->hasMany('App\Product','product_category_id','category_id');
-    }
+
 }

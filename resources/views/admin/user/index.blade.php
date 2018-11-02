@@ -41,9 +41,13 @@
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('user.show',$us)}}">Chi tiết</a></td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('user.destroy',$us)}}" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
-                                    <button type="submit" style="background: none;border: none;">Xóa</button>
+                                    <button type="submit"
+                                            @if(Auth::user()->user_level > 2)
+                                                    {{"disabled"}}
+                                            @endif
+                                            style="background: none;border: none;">Xóa</button>
                                 </form></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('user.edit',$us)}}">Edit</a></td>
+                                <td class="center"><i class="fa fa-pencil fa-fw"></i><a  href="{{route('user.edit',$us)}}">Edit</a></td>
                             </tr>
                             @endforeach
                         </tbody>
