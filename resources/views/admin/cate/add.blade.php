@@ -24,6 +24,14 @@
                                 <label>Tên thể loại</label>
                                 <input class="form-control" name="category_name" placeholder="Mời nhập tên thể loại" />
                             </div>
+                            <div class="form-group">
+                                <label>Thể loại gốc</label>
+                                <select class="form-control" name="product_provider_id">
+                                    @foreach($parent as $pr)
+                                        <option value="{{$pr->parent_id}}">{{$prd->parent_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-default">Thêm</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>
                         <form>
