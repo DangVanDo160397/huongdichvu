@@ -6,6 +6,7 @@ use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Requests\CategoryRequest;
+use App\TblParent;
 
 class CategoryController extends Controller
 {
@@ -27,7 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.cate.add');
+        $parent = TblParent::all();
+        return view('admin.cate.add',compact('parent'));
     }
 
     /**
