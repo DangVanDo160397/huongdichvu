@@ -16,6 +16,7 @@
             <div class="row">
                 <p>Mã người hỏi : {{$question->question_user_id}}</p>
                 <p>Mã chuyên gia : {{$question->question_expert_id}}</p>
+                <p>Parent : {{$question->question_parent_id}}</p>
             	<p>Câu hỏi : {{$question->question_name}}</p>
                 <p>Trả lời : {{$question->question_content}}</p>
             </div>

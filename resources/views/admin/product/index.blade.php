@@ -39,7 +39,7 @@
                                 <td>{{$pr->product_quantity}}</td>
                                 <td>{{$pr->product_category_id}}</td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('product.show',$pr)}}">Chi tiết</a></td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('product.destroy',$pr)}}" style="display: inline-table;" method="POST">
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('product.destroy',$pr)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" style="background: none;border: none;">Xóa</button>
                                     

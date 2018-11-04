@@ -18,17 +18,17 @@
                     			@endforeach
                     		</div>
                     	@endif
-                        <form action="admin/category/store" method="POST">
+                        <form action="{{route('category.store')}}" method="POST">
                         	<input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
                                 <label>Tên thể loại</label>
                                 <input class="form-control" name="category_name" placeholder="Mời nhập tên thể loại" />
                             </div>
                             <div class="form-group">
-                                <label>Thể loại gốc</label>
-                                <select class="form-control" name="product_provider_id">
+                                <label>Parent</label>
+                                <select class="form-control" name="category_parent_id">
                                     @foreach($parent as $pr)
-                                        <option value="{{$pr->parent_id}}">{{$prd->parent_name}}</option>
+                                        <option value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
                                     @endforeach
                                 </select>
                             </div>

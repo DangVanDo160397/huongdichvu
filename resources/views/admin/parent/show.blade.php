@@ -3,7 +3,7 @@
 	<div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Quản lý thể loại</h1>
+                    <h1 class="page-header">Parent</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -14,7 +14,7 @@
                 </div>
             @endif
             <div class="row">
-            	<p>Quyền : {{$parent->parent_name}}</p>
+            	<p>Parent : {{$parent->parent_name}}</p>
             </div>
             <!-- /.row -->
     </div>

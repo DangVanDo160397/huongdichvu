@@ -21,7 +21,7 @@
                         <form action="{{route('parent.store')}}" method="POST">
                         	<input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
-                                <label>Tên thể loại</label>
+                                <label>Parent</label>
                                 <input class="form-control" name="parent_name" placeholder="Mời nhập tên thể loại" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>

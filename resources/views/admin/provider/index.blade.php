@@ -33,7 +33,7 @@
                                 <td>{{$pr->provider_name}}</td>
                                 <td>{{$pr->provider_address}}</td>
                                 <td>{{$pr->provider_phone}}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('provider.destroy',$pr)}}" style="display: inline-table;" method="POST">
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('provider.destroy',$pr)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" style="background: none;border: none;">Xóa</button>
                                     

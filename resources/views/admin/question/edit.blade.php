@@ -47,6 +47,18 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Parent</label>
+                                <select class="form-control" name="question_parent_id">
+                                    @foreach($parent as $pr)
+                                        <option
+                                                @if($pr->parent_id == $question->question_parent_id)
+                                                {{"selected"}}
+                                                @endif
+                                                value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Câu hỏi</label>
                                 <textarea id="demo" name="question_name" class="form-control ckeditor" rows="5">{{$question->question_name}}</textarea>
                             </div>

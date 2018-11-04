@@ -49,6 +49,18 @@
                                 <label>Ảnh</label>
                                 <input type="file" name="expert_image" value="{{$expert->expert_image}}"  class="form-control" />
                             </div>
+                            <div class="form-group">
+                                <label>Parent</label>
+                                <select class="form-control" name="expert_parent_id">
+                                    @foreach($parent as $pr)
+                                        <option
+                                                @if($pr->parent_id == $expert->expert_parent_id)
+                                                {{"selected"}}
+                                                @endif
+                                                value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>
                         <form>

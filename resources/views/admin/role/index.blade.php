@@ -29,7 +29,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$rl->role_id}}</td>
                                 <td>{{$rl->role_name}}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('role.destroy',$rl)}}" style="display: inline-table;" method="POST">
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('role.destroy',$rl)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" style="background: none;border: none;">Xóa</button>
                                     

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Expert;
 use App\Http\Requests\QuestionRequest;
+use App\TblParent;
 class QuestionController extends Controller
 {
     /**
@@ -29,7 +30,8 @@ class QuestionController extends Controller
     {
         $user = User::all();
         $expert = Expert::all();
-        return view('admin.question.add',compact('user','expert'));
+        $parent = TblParent::all();
+        return view('admin.question.add',compact('user','expert','parent'));
     }
 
     /**
@@ -66,7 +68,8 @@ class QuestionController extends Controller
     {
         $user = User::all();
         $expert = Expert::all();
-        return view('admin.question.edit',compact('question','user','expert'));
+        $parent = TblParent::all();
+        return view('admin.question.edit',compact('question','user','expert','parent'));
     }
 
     /**

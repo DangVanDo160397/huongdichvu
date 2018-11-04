@@ -18,6 +18,7 @@
                                 <th>Đại chỉ</th>
                                 <th>Bằng Cấp</th>
                                 <th>Mã Quyền</th>
+                                <th>Parent</th>
                                 <th>Chi tiết</th>
                                 <th>Delete</th>
                                 <th>Edit</th>
@@ -29,7 +30,7 @@
                             </div>
                         @endif
                         <tbody>
-                        	@foreach($consultant_expert as $ct)
+                        	@foreach($expert as $ct)
                             <tr class="odd gradeX" align="center">
                                 <td>{{$ct->expert_id}}</td>
                                 <td>{{$ct->expert_name}}
@@ -38,11 +39,11 @@
                                 <td>{{$ct->expert_address}}</td>
                                 <td>{{$ct->expert_degree}}</td>
                                 <td>{{$ct->expert_level}}</td>
+                                <td>{{$ct->expert_parent_id}}</td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('expert.show',$ct)}}">Chi tiết</a></td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('expert.destroy',$ct)}}" style="display: inline-table;" method="POST">
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('expert.destroy',$ct)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" style="background: none;border: none;">Xóa</button>
-                                    
                                 </form></td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('expert.edit',$ct)}}">Edit</a></td>
                             </tr>

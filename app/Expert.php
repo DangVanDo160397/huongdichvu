@@ -14,6 +14,6 @@ class Expert extends Model
     }
     protected $fillable = ['expert_name','expert_address','expert_birth',
         'expert_email','expert_password','expert_degree',
-        'expert_image','expert_level',];
+        'expert_image','expert_level','expert_parent_id'];
 
 }

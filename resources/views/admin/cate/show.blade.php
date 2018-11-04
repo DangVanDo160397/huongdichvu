@@ -15,7 +15,7 @@
             @endif
             <div class="row">
             	<p>Tên thể loại : {{$category->category_name}}</p>
-                <p>Thể loại gốc : {{$category->category_parent_id}}</p>
+                <p>Parent : {{$category->category_parent_id}}</p>
             </div>
             <!-- /.row -->
     </div>

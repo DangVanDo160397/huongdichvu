@@ -20,6 +20,7 @@
                 <p><img width="300px" src="upload/expert/{{$expert->expert_image}}"></p>
             	<p>Ngày sinh : {{$expert->expert_birth}}</p>
                 <p>Thông tin bằng cấp : {{$expert->expert_degree}}</p>
+                <p>Parent : {{$expert->expert_parent_id}}</p>
             </div>
             <!-- /.row -->
     </div>

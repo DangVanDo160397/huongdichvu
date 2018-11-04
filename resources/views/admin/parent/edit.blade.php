@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Quản lý quyền
+                        <h1 class="page-header">Parent
                             <small>Sửa</small>
                         </h1>
                     </div>
@@ -21,7 +21,7 @@
                         <form action="{{route('parent.update',$parent)}}" method="POST">
                         	{{ csrf_field()}} {{ method_field('PUT') }}
                             <div class="form-group">
-                                <label>Tên thể loại</label>
+                                <label>Parent</label>
                                 <input class="form-control" name="parent_name" value="{{$parent->parent_name}}" placeholder="Mời nhập tên thể loại" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>

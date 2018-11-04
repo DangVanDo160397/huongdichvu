@@ -39,10 +39,10 @@ class TblParentController extends Controller
         $this->validate($request,[
             'parent_name' => 'required|unique:tblparent,parent_id|min:3|max:30'
         ],[
-            'parent_name.required' => 'Tên thể loại không được để trống.',
-            'parent_name.unique' => 'Tên thể loại đã tồn tại.',
-            'parent_name.min' => 'Tên thể loại không ít hơn 3 kí tự.',
-            'parent_name.max' => 'Tên thể loại không lớn hơn 30 ký tự'
+            'parent_name.required' => 'Parent không được để trống.',
+            'parent_name.unique' => 'Parent đã tồn tại.',
+            'parent_name.min' => 'Parent không ít hơn 3 kí tự.',
+            'parent_name.max' => 'Parent không lớn hơn 30 ký tự'
         ]);
         $parent = TblParent::create($request->all());
         return redirect()->route('parent.show',$parent)->with('thongbao','Thêm thành công.');
@@ -83,9 +83,9 @@ class TblParentController extends Controller
         $this->validate($request,[
             'parent_name' => 'required|min:3|max:30'
         ],[
-            'parent_name.required' => 'Tên thể loại không được để trống.',
-            'parent_name.min' => 'Tên thể loại không ít hơn 3 kí tự.',
-            'parent_name.max' => 'Tên thể loại không lớn hơn 30 ký tự'
+            'parent_name.required' => 'Parent không được để trống.',
+            'parent_name.min' => 'Parent không ít hơn 3 kí tự.',
+            'parent_name.max' => 'Parent không lớn hơn 30 ký tự'
         ]);
         $parent->update($request->all());
         return redirect()->route('parent.show',$parent)->with('thongbao','Sửa thành công.');

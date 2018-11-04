@@ -40,6 +40,7 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request)
     {
+
         $category = Category::create($request->all());
         return redirect()->route('category.show',$category)->with('thongbao','Thêm thành công.');
 
@@ -53,7 +54,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        echo $category->category_id;
+        $parent = TblParent::all();
         return view('admin.cate.show',compact('category'));
     }
 
@@ -65,7 +66,8 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.cate.edit',compact('category'));
+        $parent = TblParent::all();
+        return view('admin.cate.edit',compact('category','parent'));
     }
 
     /**
@@ -75,7 +77,7 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(CategoryRequest $request, Category $category)
+    public function update(Request $request, Category $category)
     {
         $this->validate($request,[
             'category_name' => 'required|min:3|max:30'

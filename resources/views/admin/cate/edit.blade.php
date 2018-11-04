@@ -18,11 +18,23 @@
                     			@endforeach
                     		</div>
                     	@endif
-                        <form action="admin/category/edit/{{$category->category_id}}" method="POST">
+                        <form action="{{route('category.update',$category)}}" method="POST">
                         	{{ csrf_field()}} {{method_field('PUT')}}
                             <div class="form-group">
                                 <label>Tên thể loại</label>
                                 <input class="form-control" name="category_name" value="{{$category->category_name}}" placeholder="Mời nhập tên thể loại" />
+                            </div>
+                            <div class="form-group">
+                                <label>Parent</label>
+                                <select class="form-control" name="category_parent_id">
+                                    @foreach($parent as $pr)
+                                        <option
+                                                @if($pr->parent_id == $category->category_name)
+                                                    {{"selected"}}
+                                                @endif
+                                                value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

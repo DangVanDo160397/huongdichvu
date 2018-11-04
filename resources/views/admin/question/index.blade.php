@@ -14,10 +14,11 @@
                         <thead>
                             <tr align="center">
                                 <th>ID</th>
-                                <th>Câu hỏi</th>
-                                <th>Trả lời</th>
                                 <th>Mã người hỏi</th>
                                 <th>Mã chuyên gia</th>
+                                <th>Parent</th>
+                                <th>Câu hỏi</th>
+                                <th>Trả lời</th>
                                 <th>Chi tiết</th>
                                 <th>Delete</th>
                                 <th>Edit</th>
@@ -32,12 +33,13 @@
                         	@foreach($question as $qu)
                             <tr class="odd gradeX" align="center">
                                 <td>{{$qu->question_id}}</td>
-                                <td>{{$qu->question_name}}</td>
-                                <td>{{$qu->question_content}}</td>
                                 <td>{{$qu->question_user_id}}</td>
                                 <td>{{$qu->	question_expert_id}}</td>
+                                <td>{{$qu->question_parent_id}}</td>
+                                <td>{{$qu->question_name}}</td>
+                                <td>{{$qu->question_content}}</td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('question.show',$qu)}}">Chi tiết</a></td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('question.destroy',$qu)}}" style="display: inline-table;" method="POST">
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('question.destroy',$qu)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" style="background: none;border: none;">Xóa</button>
                                 </form></td>

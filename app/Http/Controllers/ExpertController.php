@@ -6,6 +6,8 @@ use App\Expert;
 use Illuminate\Http\Request;
 use App\Http\Requests\ConsultantexpertRequest;
 use Illuminate\Support\Facades\Hash;
+use App\TblParent;
+
 class ExpertController extends Controller
 {
     /**
@@ -16,7 +18,7 @@ class ExpertController extends Controller
     public function index()
     {
         $expert = Expert::all();
-        return view('admin.consultant_expert.index',compact('expert'));
+        return view('admin.expert.index',compact('expert'));
     }
 
     /**
@@ -26,7 +28,8 @@ class ExpertController extends Controller
      */
     public function create()
     {
-        return view('admin.expert.add');
+        $parent = TblParent::all();
+        return view('admin.expert.add',compact('parent'));
     }
 
     /**
@@ -83,7 +86,8 @@ class ExpertController extends Controller
      */
     public function edit(Expert $expert)
     {
-        return view('admin.expert.edit',compact('expert'));
+        $parent = TblParent::all();
+        return view('admin.expert.edit',compact('expert','parent'));
     }
 
     /**
@@ -97,7 +101,7 @@ class ExpertController extends Controller
     {
         $this->validate($request,[],[]);
         $expert->fill($request->all());
-        $expert->consultant_expert_password = Hash::make($expert->consultant_expert_password);
+        $expert->expert_password = Hash::make($expert->expert_password);
         if($request->hasFile("expert_image"))
         {
             $file = $request->file('expert_image');
