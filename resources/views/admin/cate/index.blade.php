@@ -15,6 +15,7 @@
                             <tr align="center">
                                 <th>ID</th>
                                 <th>Tên</th>
+                                <th>Tên không dấu</th>
                                 <th>Parent</th>
                                 <th>Chi tiết</th>
                                 <th>Delete</th>
@@ -31,6 +32,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$tl->category_id}}</td>
                                 <td>{{$tl->category_name}}</td>
+                                <td>{{$tl->category_slug_name}}</td>
                                 <td>{{$tl->category_parent_id}}</td>
                                <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('category.show',$tl)}}">Chi tiết</a></td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('category.destroy',$tl)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">

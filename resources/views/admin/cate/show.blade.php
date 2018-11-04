@@ -15,6 +15,7 @@
             @endif
             <div class="row">
             	<p>Tên thể loại : {{$category->category_name}}</p>
+                <p>Tên không dấu : {{$category->category_slug_name}}</p>
                 <p>Parent : {{$category->category_parent_id}}</p>
             </div>
             <!-- /.row -->

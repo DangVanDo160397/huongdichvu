@@ -42,6 +42,7 @@ class ProductController extends Controller
     {
         $product = new Product();
         $product->fill($request->all());
+        $product->product_slug_name = changeTitle($request->product_name);
         if($request->hasFile("product_image"))
         {
             $file = $request->file('product_image');
@@ -113,6 +114,7 @@ class ProductController extends Controller
             'product_provider_id.required' => 'Tên NCC không được để trống.',
         ]);
         $product->fill($request->all());
+        $product->product_slug_name = changeTitle($request->product_name);
         if($request->hasFile("product_image"))
         {
             $file = $request->file('product_image');

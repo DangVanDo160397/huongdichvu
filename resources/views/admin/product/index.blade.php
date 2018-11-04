@@ -15,6 +15,7 @@
                             <tr align="center">
                                 <th>ID</th>
                                 <th>Tên</th>
+                                <th>Tên không dấu</th>
                                 <th>Giá</th>
                                 <th>Số lượng</th>
                                 <th>Thể loại</th>
@@ -35,6 +36,7 @@
                                 <td>{{$pr->product_name}}
                                     <p><img width="100px" src="upload/product/{{$pr->product_image}}"></p>
                                 </td>
+                                <td>{{$pr->product_slug_name}}</td>
                                 <td>{{$pr->product_price}}</td>
                                 <td>{{$pr->product_quantity}}</td>
                                 <td>{{$pr->product_category_id}}</td>

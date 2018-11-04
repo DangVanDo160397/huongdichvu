@@ -15,8 +15,8 @@
                             <tr align="center">
                                 <th>ID</th>
                                 <th>Tiêu đề</th>
-                                <th>Nội Dung</th>
                                 <th>Bình Chọn</th>
+                                <th>Tên không dấu</th>
                                 <th>Xem chi tiết</th>
                                 <th>Delete</th>
                                 <th>Edit</th>
@@ -35,7 +35,7 @@
                                     <p><img width="100px" src="upload/article/{{$al->article_image}}"></p>
                                 </td>
                                 <td>{{$al->article_vote}}</td>
-                                <td>{{$al->article_product_id}}</td>
+                                <td>{{$al->article_slug_name}}</td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('article.show',$al)}}">Chi tiết</a></td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('article.destroy',$al)}}" onsubmit="return confirm('Bạn có muốn xóa không?');"  method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}

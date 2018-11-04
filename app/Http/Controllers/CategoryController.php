@@ -40,8 +40,9 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request)
     {
-
-        $category = Category::create($request->all());
+        $category = new Category();
+        $category->category_slug_name = changeTitle($request->category_name);
+        $category->fill($request->all());
         return redirect()->route('category.show',$category)->with('thongbao','Thêm thành công.');
 
     }
@@ -86,7 +87,9 @@ class CategoryController extends Controller
             'category_name.min' => 'Tên thể loại không ít hơn 3 kí tự.',
             'category_name.max' => 'Tên thể loại không lớn hơn 30 ký tự'
         ]);
-        $category->update($request->all());
+        $category->category_slug_name = changeTitle($request->category_name);
+        $category->fill($request->all());
+        $category->save();
         return redirect()->route('category.show',$category)->with('thongbao','Sửa thành công.');
     }
 

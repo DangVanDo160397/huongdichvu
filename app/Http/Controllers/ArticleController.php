@@ -43,6 +43,7 @@ class ArticleController extends Controller
         //lưu bản ghi vào cơ sở dữ liệu
         $article = new Article();
         $article->fill($request->all());
+        $article->article_slug_name  = changeTitle($request->article_title);
         if($request->hasFile("article_image"))
         {
             $file = $request->file('article_image');
@@ -114,6 +115,7 @@ class ArticleController extends Controller
             'article_description.required' => 'Mô tả không được để trống.',
         ]);
         $article->fill($request->all());
+        $article->article_slug_name = changeTitle($request->article_title);
         if($request->hasFile("article_image"))
         {
             $file = $request->file('article_image');

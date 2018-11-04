@@ -29,7 +29,7 @@
                                 <select class="form-control" name="category_parent_id">
                                     @foreach($parent as $pr)
                                         <option
-                                                @if($pr->parent_id == $category->category_name)
+                                                @if($pr->parent_id == $category->category_parent_id)
                                                     {{"selected"}}
                                                 @endif
                                                 value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
