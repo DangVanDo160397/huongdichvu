@@ -11,6 +11,7 @@
 |
 */
 Route::get('/','PagesController@index');
+Route::get('/trangchu','PagesController@index');
 
 Route::group(['prefix' => 'admin','middleware' => 'admincheck'],function() {
 
