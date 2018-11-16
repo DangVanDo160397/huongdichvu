@@ -44,7 +44,10 @@ class TblParentController extends Controller
             'parent_name.min' => 'Parent không ít hơn 3 kí tự.',
             'parent_name.max' => 'Parent không lớn hơn 30 ký tự'
         ]);
-        $parent = TblParent::create($request->all());
+        $parent = new TblParent();
+        $parent->parent_slug_name = changeTitle($request->parent_name);
+        $parent->fill($request->all());
+        $parent->save();
         return redirect()->route('parent.show',$parent)->with('thongbao','Thêm thành công.');
 
     }
@@ -87,7 +90,9 @@ class TblParentController extends Controller
             'parent_name.min' => 'Parent không ít hơn 3 kí tự.',
             'parent_name.max' => 'Parent không lớn hơn 30 ký tự'
         ]);
-        $parent->update($request->all());
+        $parent->parent_slug_name = changeTitle($request->parent_name);
+        $parent->fill($request->all());
+        $parent->save();
         return redirect()->route('parent.show',$parent)->with('thongbao','Sửa thành công.');
     }
 

@@ -27,7 +27,7 @@
                             <div class="col-md-2 col-sm-6 col-xs-6">
                                 <div id="logo">
                                     <!--<a href="home.html"><img src="images/logo.png" alt="logo"></a>-->
-                                    <a href="home.html"><span>advisory</span></a>
+                                    <a href="{{route('pages.trangchu')}}"><span>advisory</span></a>
                                 </div>                       
                             </div>
                             <div class="col-sm-6 visible-sm">
@@ -46,19 +46,20 @@
                                     </div>
                                     <div class="collapse navigation navbar-collapse navbar-ex1-collapse remove-space">
                                         <ul class="list-unstyled nav1 cl-effect-10">
-                                            <li><a  data-hover="trang chủ" class="active"><span>trang chủ</span></a></li>
-                                            <li><a data-hover="bản tin tư vấn"  href="news.html"><span>bản tin tư vấn</span></a></li>
-                                            <li><a data-hover="mỹ phẩm"  href="mypham.html"><span>mỹ phẩm</span></a></li>
-                                            <li><a data-hover="thời trang"  href="thoitrang.html"><span>thời trang</span></a></li>
-                                            <li><a data-hover="liên hệ" href="contact.html"><span>liên hệ</span></a></li>
+                                            <li><a  data-hover="trang chủ" href="{{route('pages.trangchu')}}" class="active"><span>trang chủ</span></a></li>
+                                            <li><a data-hover="bản tin tư vấn"  href="{{route('pages.tintuc')}}"><span>Bản tin tư vấn</span></a></li>
+                                            <li><a data-hover="mỹ phẩm"  href="{{route('pages.mypham')}}"><span>Mỹ phẩm</span></a></li>
+                                            <li><a data-hover="thời trang"  href="{{route('pages.thoitrang')}}"><span>Thời trang</span></a></li>
+                                            <li><a data-hover="liên hệ" href="contact.html"><span>Liên hệ</span></a></li>
                                         </ul>
 
                                     </div>
                                 </nav>
                             </div>
                             <div class="col-md-2  col-sm-4 col-xs-12 hidden-sm">
-                                <div class="text-right"><button type="button" class="book-now-btn">Book Now</button></div>
+                                <div class="text-right"><button type="button" class="book-now-btn">Đăng nhập</button></div>
                             </div>
+
                         </div>
                     </div>
                 </div>

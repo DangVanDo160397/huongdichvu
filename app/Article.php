@@ -13,7 +13,7 @@ class Article extends Model
         return $this->attributes['article_id'];
     }
     protected $fillable = ['article_title','article_content','article_description',
-        'article_vote','article_image','article_product_id','article_enable','article_slug_nameWWWW'];
+        'article_vote','article_image','article_product_id','article_enable','article_slug_name','article_parent_id'];
 
     public function product() {
         return $this->belongsTo('App\Product','article_product_id','product_id');

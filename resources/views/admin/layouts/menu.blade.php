@@ -124,7 +124,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="{{route('parent.index')}}"><i class="fa fa-users fa-fw"></i>Thể loại gốc<span class="fa arrow"></span></a>
+                            <a href="{{route('parent.index')}}"><i class="fa fa-users fa-fw"></i>Parent<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{route('parent.index')}}">Danh sách </a>

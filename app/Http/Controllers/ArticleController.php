@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 use App\Product;
+use App\TblParent;
 use App\Http\Requests\ArticleRequest;
 class ArticleController extends Controller
 {
@@ -29,7 +30,8 @@ class ArticleController extends Controller
     {
         //lấy ra view tạo 1 bản ghi
         $product = Product::all();
-        return view('admin.article.add',compact('product'));
+        $parent = TblParent::all();
+        return view('admin.article.add',compact('product','parent'));
     }
 
     /**

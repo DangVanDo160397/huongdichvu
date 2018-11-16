@@ -15,6 +15,7 @@
                             <tr align="center">
                                 <th>ID</th>
                                 <th>Tên</th>
+                                <th>Tên không dấu</th>
                                 <th>Delete</th>
                                 <th>Edit</th>
                             </tr>
@@ -29,6 +30,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$pt->parent_id}}</td>
                                 <td>{{$pt->parent_name}}</td>
+                                <td>{{$pt->parent_slug_name}}</td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('parent.destroy',$pt)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" style="background: none;border: none;">Xóa</button>

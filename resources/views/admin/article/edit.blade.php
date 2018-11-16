@@ -26,6 +26,18 @@
                         <form action="{{route('article.update',$article)}}" enctype="multipart/form-data" method="POST">
                         	{{csrf_field()}} {{method_field('PUT')}}
                             <div class="form-group">
+                                <label>Parent</label>
+                                <select class="form-control" name="article_parent_id">
+                                    @foreach($parent as $pr)
+                                        <option
+                                                @if($pr->parent_id == $category->article_parent_id)
+                                                {{"selected"}}
+                                                @endif
+                                                value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Sản phẩm</label>
                                 <select class="form-control" name="article_product_id">
                                     @foreach($product as $pr)

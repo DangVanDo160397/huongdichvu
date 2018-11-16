@@ -17,7 +17,7 @@ class Product extends Model
                             'product_enable','product_description','product_provider_id',
                             'product_content','product_manufacturing_date','product_expiry_date'];
 
-    public function categoty() {
+    public function category() {
         return $this->belongsTo('App\Category','product_category_id','category_id');
     }
 

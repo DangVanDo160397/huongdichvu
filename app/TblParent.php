@@ -13,4 +13,10 @@ class TblParent extends Model
     public function getIdAttribute(){
         return $this->attributes['parent_id'];
     }
+    public function category() {
+        $this->hasMany('App\Category','category_parent_id','parent_id');
+    }
+    public function product() {
+        return $this->hasManyThrough('App\TblParent','App\Category','category_parent_id','product_category_id','product_id');
+    }
 }

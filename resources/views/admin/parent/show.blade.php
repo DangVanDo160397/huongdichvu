@@ -15,6 +15,7 @@
             @endif
             <div class="row">
             	<p>Parent : {{$parent->parent_name}}</p>
+                <p>Tên không dấu : {{$parent->parent_slug_name}}</p>
             </div>
             <!-- /.row -->
     </div>

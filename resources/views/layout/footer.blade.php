@@ -8,15 +8,24 @@
                                 <ul class="list-unstyled footer-contact-list">
                                     <li>
                                         <i class="fa fa-map-marker fa-lg"></i>
-                                        <p>701 Old York Drive Richmond USA.</p>
+                                        <p>Tác giả Nhóm 4 ktpm3_k10 Đại học công nghiệp hà nội</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-phone fa-lg"></i>
                                         <p><a href="tel:+84-1628408836"> +84-1628408836</a></p>
                                     </li>
+
                                     <li>
                                         <i class="fa fa-envelope-o fa-lg"></i>
-                                        <p><a href="mailto:huynhbom1997@gmail.com"> huynhbom1997@gmail.com</a></p>
+                                        <p><a href="mailto:dangvando160397@gmai.com"> dangvando160397@gmail.com</a></p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope-o fa-lg"></i>
+                                        <p><a href="mailto:nguyentuanthanhfui@gmail.com">nguyentuanthanhfui@gmail.com</a></p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope-o fa-lg"></i>
+                                        <p><a href="mailto:huynhbom1997@gmail.com">huynhbom1997@gmail.com</a></p>
                                     </li>
                                 </ul>
                                 <div class="footer-social-icon">

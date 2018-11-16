@@ -40,9 +40,11 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request)
     {
+        
         $category = new Category();
         $category->category_slug_name = changeTitle($request->category_name);
         $category->fill($request->all());
+        $category->save();
         return redirect()->route('category.show',$category)->with('thongbao','Thêm thành công.');
 
     }

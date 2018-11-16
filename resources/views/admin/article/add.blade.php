@@ -25,6 +25,14 @@
                             @endif
                         <form action="{{route('article.store')}}" enctype="multipart/form-data" method="POST">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <div class="form-group">
+                                <label>Parent</label>
+                                <select class="form-control" name="article_parent_id">
+                                    @foreach($parent as $pr)
+                                        <option value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         	<div class="form-group">
                                 <label>Sản phẩm</label>
                                 <select class="form-control" name="article_product_id">

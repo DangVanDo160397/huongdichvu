@@ -12,7 +12,7 @@
                 <div class="carousel-inner">
                     <div class="item active"> <img src="images/3.jpg" style="width:100%;" alt="First slide">
                         <div class="carousel-caption">
-                            
+
                         </div>
                     </div>
                     <div class="item"> <img src="images/3.jpg" style="width:100%;" alt="Second slide">
@@ -79,85 +79,35 @@
             </section>
 
 <!----resort-overview--->
-            <section class="resort-overview-block">
-                <div class="container">
-                    <div class="row">
-                        @foreach($article as $ar)
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
-                            <div class="side-A">
-                                <div class="product-thumb">
-                                    <div class="image">
-                                        <a><img src="images/category/1.jpg" class="img-responsive" alt="image"></a>
+                <section class="resort-overview-block">
+                    <div class="container">
+                        <div class="row">
+                            @foreach($article as $ar)
+                                @if($ar->article_parent_id == 1)
+                                    <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                                        <div class="side-A">
+                                            <div class="product-thumb">
+                                                <div class="image">
+                                                    <a><img src="upload/article/{{$ar->article_image}}" class="img-responsive" alt="image"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="side-B">
+                                            <div class="product-desc-side">
+                                                <h3><a>{{$ar->article_title}}</a></h3>
+                                                <p>{{$ar->article_description}}</p>
+                                                <div class="links"><a href="single.html">Đọc thêm</a></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="side-B">
-                                <div class="product-desc-side">
-                                    <h3><a>{{$ar->article_title}}</a></h3>
-                                    <p>{{$ar->article_description}}</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        @endforeach
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
-                            <div class="side-A">
-                                <div class="product-thumb">
-                                    <div class="image">
-                                        <a><img alt="image" class="img-responsive" src="images/category/2.jpg"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="side-B">
-                                <div class="product-desc-side">
-                                    <h3><a>Khi đi biển</a></h3>
-                                    <p>Mẹo chống nắng hiệu quả nhất khi đi biển sử dụng kem chống nắng có chỉ số SPF từ 30 trở lên, giúp ngăn ngừa tia UVA và UVB, chống thấm nước và mồ hôi, chăm sóc da bằng mặt nạ cà chua, trà xanh.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
-                            <div class="side-A">
-                                <div class="product-desc-side">
-                                    <h3><a>Tẩy trang đúng cách</a></h3>
-                                    <p>Bí quyết tẩy trang giúp sạch lớp trang điểm, không lo bị mụn: chọn sản phẩm tẩy trang phù hợp với từng loại da, chú ý tẩy trang vùng mắt và thực hiện các bước tẩy trang đúng cách.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
+                                    <div class="clear"></div>
+                                @endif
+                            @endforeach
+                            <div class="clearfix"></div>
 
-                            <div class="side-B">
-                                <div class="product-thumb">
-                                    <div class="image txt-rgt">
-                                        <a class="arrow-left"><img src="images/category/3.jpg" class="img-responsive" alt="imaga"></a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <div class="clear"></div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
-                            <div class="side-A">
-                                <div class="product-desc-side">
-                                    <h3><a>Thư giãn và dững da</a></h3>
-                                    <p>Chăm sóc da toàn thân cũng như chăm sóc tóc và da mặt là điều vô cùng quan trọng. Nếu bạn gái biết chăm sóc da toàn thân đúng cách thì cơ hội sở hữu làn da trắng khỏe, mịn màng và rạng rỡ một cách tự nhiên.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-
-                            <div class="side-B">
-                                <div class="product-thumb txt-rgt">
-                                    <div class="image">
-                                        <a class="arrow-left"><img src="images/category/4.jpg" class="img-responsive" alt="imaga"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-
                     </div>
-                </div>
-            </section>
+                </section>
 
             <!-----blog slider----->
 
@@ -183,75 +133,27 @@
             <section class="resort-overview-block">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
-                            <div class="side-A">
-                                <div class="product-thumb">
-                                    <div class="image">
-                                        <a><img src="images/category/tr1.jpg" class="img-responsive" alt="image"></a>
+                        @foreach($article as $ar)
+                            @if($ar->article_parent_id == 2)
+                                <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                                    <div class="side-A">
+                                        <div class="product-thumb">
+                                            <div class="image">
+                                                <a><img src="upload/article/{{$ar->article_image}}" class="img-responsive" alt="image"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side-B">
+                                        <div class="product-desc-side">
+                                            <h3><a>{{$ar->article_title}}</a></h3>
+                                            <p>{{$ar->article_description}}</p>
+                                            <div class="links"><a href="single.html">Đọc thêm</a></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="side-B">
-                                <div class="product-desc-side">
-                                    <h3><a>luxury spa</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
-                            <div class="side-A">
-                                <div class="product-thumb">
-                                    <div class="image">
-                                        <a><img alt="image" class="img-responsive" src="images/category/tr2.jpg"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="side-B">
-                                <div class="product-desc-side">
-                                    <h3><a>Beatusish ingl</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
-                            <div class="side-A">
-                                <div class="product-desc-side">
-                                    <h3><a>luxury room</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-
-                            <div class="side-B">
-                                <div class="product-thumb">
-                                    <div class="image txt-rgt">
-                                        <a class="arrow-left"><img src="images/category/tr3.jpg" class="img-responsive" alt="imaga"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
-                            <div class="side-A">
-                                <div class="product-desc-side">
-                                    <h3><a>heaven seanery</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                                    <div class="links"><a href="single.html">Đọc thêm</a></div>
-                                </div>
-                            </div>
-
-                            <div class="side-B">
-                                <div class="product-thumb txt-rgt">
-                                    <div class="image">
-                                        <a class="arrow-left"><img src="images/category/tr4.jpg" class="img-responsive" alt="imaga"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                <div class="clear"></div>
+                            @endif
+                        @endforeach
                         <div class="clearfix"></div>
 
                     </div>
@@ -261,42 +163,17 @@
             <section class="gallery-block gallery-front">
                 <div class="container">
                     <div class="row">
+                        @foreach($product as $pr)
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="gallery-image">
-                                <img class="img-responsive" src="images/spa1.jpg">
+                                <img class="img-responsive" src="upload/product/{{$pr->product_image}}">
                                 <div class="overlay">
                                     <a class="info pop example-image-link img-responsive" href="images/room1.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
                                     <p><a>delux room</a></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="gallery-image">
-                                <img class="img-responsive" src="images/spa2.jpg">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="images/room2.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>super room</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="gallery-image">
-                                <img class="img-responsive" src="images/spa1.jpg">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="images/room3.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>single room</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="gallery-image">
-                                <img class="img-responsive" src="images/spa2.jpg">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="images/room4.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>double room</a></p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </section>

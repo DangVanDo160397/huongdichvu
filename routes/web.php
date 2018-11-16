@@ -10,8 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','PagesController@index');
+use App\Product;
 
+Route::get('/','PagesController@index');
+Route::get('/trangchu','PagesController@index')->name('pages.trangchu');
+Route::get('/mypham','PagesController@getMyPham')->name('pages.mypham');
+Route::get('/thoitrang','PagesController@getThoiTrang')->name('pages.thoitrang');
+Route::get('/tintuc','PagesController@getTintuc')->name('pages.tintuc');
+Route::get('mypham1',function (){
+    $product = Product::find(2);
+    echo $product->category->category_parent_id;
+});
 Route::group(['prefix' => 'admin','middleware' => 'admincheck'],function() {
 
     Route::get('/admin','CategoryController@index')->name('admin.index');
@@ -26,6 +35,10 @@ Route::group(['prefix' => 'admin','middleware' => 'admincheck'],function() {
     Route::resource('question','QuestionController');
     Route::resource('expert','ExpertController');
     Route::resource('slide','SlideController');
+
+    Route::group(['prefix' => 'ajax'],function() {
+        Route::get('category/{category_parent_id}','AjaxController@getCategory');
+    });
 });
 
 Route::get('/admin/login','AdminController@getLogin')->name('admin.login');

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Provider;
 use App\Http\Requests\ProductRequest;
+use App\TblParent;
 class ProductController extends Controller
 {
     /**
@@ -29,7 +30,8 @@ class ProductController extends Controller
     {
         $category = Category::all();
         $provider = Provider::all();
-        return view('admin.product.add',compact('category','provider'));
+        $parent = TblParent::all();
+        return view('admin.product.add',compact('category','provider','parent'));
     }
 
     /**

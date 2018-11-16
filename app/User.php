@@ -36,4 +36,8 @@ class User extends Authenticatable
     {
         return $this->user_level < 5;
     }
+    public function question()
+    {
+        $this->hasMany('App\Question','question_user_id','user_id');
+    }
 }
