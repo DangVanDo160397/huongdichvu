@@ -133,9 +133,6 @@ class ProductController extends Controller
             $file->move("upload/product",$Hinh);
             $product->product_image = $Hinh;
         }
-        else {
-            $product->product_image = "";
-        }
         $product->save();
         return redirect()->route('product.show',$product)->with('thongbao','Sửa thành công.');
     }

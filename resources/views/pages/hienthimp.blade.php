@@ -5,15 +5,14 @@
             <div class="row">
 
                 <div class="col-md-9 col-sm-8 col-xs-12">
-                    <h2 class="blog-title-head">{{$article->article_title}}</h2>
-                    <p class="blog-desc">{!!$article->article_description!!}</p>
+                    <h2 class="blog-title-head">{{$product->product_name}}</h2>
                     <hr>
                     <p class="user-info">Posted by <a>Admin</a> in <a>General</a> | <a>10 Comments</a></p>
                     <div class="blog-image-single margin-top-small">
-                        <img src="upload/article/{{$article->article_image}}" class="img-responsive">
+                        <img src="upload/product/{{$product->product_image}}" class="img-responsive">
                     </div>
 
-                    <p class="blog-desc">{!!$article->article_content!!}</p>
+                    <p class="blog-desc">{!!$product->product_content!!}</p>
                     <hr>
                     <div class="clearfix"></div>
                     <div class="single-bottom comment-form">

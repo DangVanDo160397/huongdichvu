@@ -91,7 +91,8 @@ class ArticleController extends Controller
     {
         //lấy ra view để sửa 1 bản ghi
         $product = Product::all();
-        return view('admin.article.edit',compact('article','product'));
+        $parent = TblParent::all();
+        return view('admin.article.edit',compact('article','product','parent'));
     }
 
     /**
@@ -105,17 +106,19 @@ class ArticleController extends Controller
     {
         //cap nhap bản ghi do
         $this->validate($request,[
-            'article_title' => 'required|min:3',
+            'article_title' => 'required|min:3|max:30',
             'article_content' => 'required|min:3',
-            'article_description' => 'required|min:3',
+            'article_description' => 'required|min:3|max:200',
         ],[
             'article_title.required' => 'Tiêu đề không được để trống.',
             'article_title.min' => 'Tiêu đề không ít hơn 3 kí tự.',
+            'article_title.max' => 'Tiêu đề không được quá 30 ký tự.',
             'article_content.required' => 'Nội Dung không được để trống.',
             'article_content.min' => 'Nội dung không ít hơn 3 kí tự.',
             'article_description.required' => 'Mô tả không được để trống.',
-            'article_description.required' => 'Mô tả không được để trống.',
+            'article_description.max' => 'Mô tả không được quá 200 ký tự để trống.',
         ]);
+        
         $article->fill($request->all());
         $article->article_slug_name = changeTitle($request->article_title);
         if($request->hasFile("article_image"))
@@ -133,9 +136,6 @@ class ArticleController extends Controller
             }
             $file->move("upload/article",$Hinh);
             $article->article_image = $Hinh;
-        }
-        else {
-            $article->article_image = "";
         }
         $article->save();
         return redirect()->route('article.show',$article)->with('thongbao','Sửa thành công.');

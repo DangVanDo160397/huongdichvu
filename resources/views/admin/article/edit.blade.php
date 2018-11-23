@@ -30,7 +30,7 @@
                                 <select class="form-control" name="article_parent_id">
                                     @foreach($parent as $pr)
                                         <option
-                                                @if($pr->parent_id == $category->article_parent_id)
+                                                @if($pr->parent_id == $article->article_parent_id)
                                                 {{"selected"}}
                                                 @endif
                                                 value="{{$pr->parent_id}}">{{$pr->parent_name}}</option>
@@ -63,8 +63,12 @@
                                 <textarea id="demo" name="article_content"  class="form-control ckeditor" rows="5">{{$article->article_content}}</textarea>
                             </div>
                             <div class="form-group">
+                                 <input type="checkbox" name="changeImage" id="changeImage" />
                                 <label>Ảnh</label>
-                                <input type="file" name="article_image" class="form-control" />
+                                 <p>
+                                    <img height="300px"  src="upload/article/{{$article->article_image}}">
+                                </p>
+                                <input type="file" name="article_image" disabled value="{{$article->article_image}}" class="form-control image" />
                             </div>
                             <div class="form-group">
                                 <label>Hiển thị</label>
@@ -80,4 +84,20 @@
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
+@endsection
+@section('script')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#changeImage").change(function() {
+                if($(this).is(":checked"))
+                {
+                    $(".image").removeAttr('disabled');
+                }
+                else
+                {
+                    $(".image").attr('disabled','');
+                }
+            });
+        });
+    </script>
 @endsection

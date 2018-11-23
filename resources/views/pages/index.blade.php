@@ -95,8 +95,8 @@
                                         <div class="side-B">
                                             <div class="product-desc-side">
                                                 <h3><a>{{$ar->article_title}}</a></h3>
-                                                <p>{{$ar->article_description}}</p>
-                                                <div class="links"><a href="single.html">Đọc thêm</a></div>
+                                                <p>{!!$ar->article_description!!}</p>
+                                                <div class="links"><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">Đọc thêm</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@
                                         <div class="product-desc-side">
                                             <h3><a>{{$ar->article_title}}</a></h3>
                                             <p>{{$ar->article_description}}</p>
-                                            <div class="links"><a href="single.html">Đọc thêm</a></div>
+                                            <div class="links"><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">Đọc thêm</a></div>
                                         </div>
                                     </div>
                                 </div>

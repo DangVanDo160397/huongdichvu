@@ -35,7 +35,6 @@
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="changePassword" id="changePassword" />
-
                                 <label>Đổi mật khẩu</label>
                                 <input type="password" class="form-control password" name="user_password" placeholder="Please Enter Category Name" disabled="" />
                             </div>

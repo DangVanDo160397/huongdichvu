@@ -10,17 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Product;
 
 Route::get('/','PagesController@index');
 Route::get('/trangchu','PagesController@index')->name('pages.trangchu');
 Route::get('/mypham','PagesController@getMyPham')->name('pages.mypham');
 Route::get('/thoitrang','PagesController@getThoiTrang')->name('pages.thoitrang');
 Route::get('/tintuc','PagesController@getTintuc')->name('pages.tintuc');
-Route::get('mypham1',function (){
-    $product = Product::find(2);
-    echo $product->category->category_parent_id;
-});
+Route::get('tintuc/{id}/{TenKhongDau}.html','PagesController@tintuc');
+Route::get('mypham/{id}/{TenKhongDau}.html','PagesController@mypham');
+
 Route::group(['prefix' => 'admin','middleware' => 'admincheck'],function() {
 
     Route::get('/admin','CategoryController@index')->name('admin.index');

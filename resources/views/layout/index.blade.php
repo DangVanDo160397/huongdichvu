@@ -12,7 +12,7 @@ License URI: http://www.themevault.net/license/-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/icons/favicon.png"/>
         <title>Tư vấn mỹ phẩm và thời trang</title>
-
+        <base href="{{asset('')}}">
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />

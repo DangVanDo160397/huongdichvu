@@ -17,8 +17,8 @@
                 <p><img width="300px" src="upload/article/{{$article->article_image}}"></p>
                 <p>Tiêu đề : {{$article->article_title}}</p>
                 <p>Tên không dấu : {{$article->article_slug_name}}</p>
-                <p>Mô tả : {{$article->article_description}}</p>
-                <p>Nội Dung :{{$article->article_content}}</p>
+                <p>Mô tả : {!!$article->article_description !!}</p>
+                <p>Nội Dung :{!!$article->article_content!!}</p>
             	<p> Mã sản phẩm : {{$article->article_product_id}}</p>
                 <p>Hiển thị : {{$article->article_enable}}</p>
             </div>

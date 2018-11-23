@@ -31,6 +31,16 @@ class PagesController extends Controller
         return view('pages.thoitrang',compact('product'));
     }
     public  function getTintuc() {
-        return view('pages.tintuc');
+        return view('pages.tintuvan');
+    }
+    public function tintuc($id) {
+        $article = Article::find($id);
+       return view('pages/tintuc',compact('article'));
+
+    }
+    public function mypham($id) {
+        $product = Product::find($id);
+        return view('pages/hienthimp',compact('product'));
+
     }
 }

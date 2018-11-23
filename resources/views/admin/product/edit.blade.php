@@ -86,8 +86,12 @@
                                 <input class="form-control" name="product_expiry_date" value="{{$product->product_expiry_date}}" placeholder="Please Enter Password" />
                             </div>
                             <div class="form-group">
-                                <label>Ảnh</label>
-                                <input type="file" name="product_image" class="form-control" />
+                                <input type="checkbox" name="changeImage" id="changeImage" />
+                                <label>Sửa ảnh</label>
+                                <p>
+                                    <img height="300px"  src="upload/product/{{$product->product_image}}">
+                                </p>
+                                <input type="file" name="product_image" disabled  class="form-control image" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>
@@ -99,4 +103,20 @@
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
+@endsection
+@section('script')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#changeImage").change(function() {
+                if($(this).is(":checked"))
+                {
+                    $(".image").removeAttr('disabled');
+                }
+                else
+                {
+                    $(".image").attr('disabled','');
+                }
+            });
+        });
+    </script>
 @endsection
