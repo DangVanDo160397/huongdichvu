@@ -22,15 +22,15 @@
                         	{{ csrf_field()}} {{ method_field('PUT') }}
                             <div class="form-group">
                                 <label>Tên NCC</label>
-                                <input class="form-control" name="provider_name" value="{{$provider->provider_name}}" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="provider_name" value="{{$provider->provider_name}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>
-                                <input class="form-control" name="provider_address" value="{{$provider->provider_address}}" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="provider_address" value="{{$provider->provider_address}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Số điện thoại</label>
-                                <input class="form-control" name="provider_phone" value="{{$provider->provider_phone}}" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="provider_phone" value="{{$provider->provider_phone}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

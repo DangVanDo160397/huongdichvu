@@ -37,9 +37,9 @@
                                 <td>{{$al->article_vote}}</td>
                                 <td>{{$al->article_slug_name}}</td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('article.show',$al)}}">Chi tiết</a></td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('article.destroy',$al)}}" onsubmit="return confirm('Bạn có muốn xóa không?');"  method="POST">
+                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('article.destroy',$al)}}"  style="display: inline-table;" method="POST" onsubmit="return confirm('Bạn có muốn xóa không?');">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
-                                    <button type="submit">Xóa</button>
+                                    <button  type="submit" style="background: none;border: none;">Xóa</button>
                                 </form></td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('article.edit',$al)}}">Edit</a></td>
                             </tr>

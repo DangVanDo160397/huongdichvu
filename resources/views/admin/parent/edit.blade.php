@@ -22,7 +22,7 @@
                         	{{ csrf_field()}} {{ method_field('PUT') }}
                             <div class="form-group">
                                 <label>Parent</label>
-                                <input class="form-control" name="parent_name" value="{{$parent->parent_name}}" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="parent_name" value="{{$parent->parent_name}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

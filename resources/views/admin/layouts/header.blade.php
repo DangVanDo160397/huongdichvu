@@ -19,7 +19,7 @@
                     </a>
                     
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>{{Auth::user()->name}}</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>{{Auth::user()->user_name}}</a>
                         </li>
                         <li><a href="{{route('user.edit',Auth::user())}}"><i class="fa fa-gear fa-fw"></i>Đổi mật khẩu</a>
                         </li>

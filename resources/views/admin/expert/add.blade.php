@@ -27,23 +27,23 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
                                 <label>Tên</label>
-                                <input class="form-control" name="expert_name" placeholder="Please Enter Username" />
+                                <input class="form-control" name="expert_name" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>
-                                <input class="form-control" name="expert_address" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_address" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Ngày sinh</label>
-                                <input class="form-control" name="expert_birth" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_birth" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" name="expert_email" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_email" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input class="form-control" name="expert_password" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_password" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Bằng cấp</label>

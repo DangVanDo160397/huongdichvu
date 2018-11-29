@@ -47,7 +47,7 @@ class UserController extends Controller
         {
             $file = $request->file('user_image');
             $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'png' && $duoi != "jpeg" )
+            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
             {
                 return redirect()->route('user.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
             }

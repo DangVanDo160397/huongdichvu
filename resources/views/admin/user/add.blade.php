@@ -27,15 +27,15 @@
                         	{{csrf_field()}}
                             <div class="form-group">
                                 <label>Username</label>
-                                <input class="form-control" name="user_name" placeholder="Please Enter Username" />
+                                <input class="form-control" name="user_name" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" name="user_email" placeholder="Please Enter Password" />
+                                <input class="form-control" name="user_email" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="user_password" placeholder="Please Enter Password" />
+                                <input type="password" class="form-control" name="user_password" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Ảnh</label>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>
-                                <input type="text" name="user_address" class="form-control" />
+                                <input type="text" name="user_address" class="form-control" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Giới tính</label>
@@ -51,15 +51,15 @@
                             </div>
                             <div class="form-group">
                                 <label>Điện thoại</label>
-                                <input type="text" name="user_phone" class="form-control" />
+                                <input type="text" name="user_phone" class="form-control" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Tuổi</label>
-                                <input type="text" name="user_age" class="form-control" />
+                                <input type="text" name="user_age" class="form-control" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Chú ý</label>
-                                <input type="text" name="user_note" class="form-control" />
+                                <input type="text" name="user_note" class="form-control" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

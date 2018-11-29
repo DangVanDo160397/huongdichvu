@@ -48,7 +48,7 @@ class ExpertController extends Controller
         {
             $file = $request->file('expert_image');
             $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG' && $duoi != 'png' && $duoi != "jpeg" )
+            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
             {
                 return redirect()->route('expert.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
             }
@@ -106,7 +106,7 @@ class ExpertController extends Controller
         {
             $file = $request->file('expert_image');
             $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG' && $duoi != 'png' && $duoi != "jpeg" )
+            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
             {
                 return redirect()->route('expert.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
             }

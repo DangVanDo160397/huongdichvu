@@ -26,6 +26,7 @@ License URI: http://www.themevault.net/license/-->
         <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
         <script src="js/instafeed.min.js" type="text/javascript"></script>
         <script src="js/custom.js" type="text/javascript"></script>
+        <script type="text/javascript" language="javascript" src="admin_asset/ckeditor/ckeditor.js" ></script>
     </head>
     <body>
     <!-- Load Facebook SDK for JavaScript -->

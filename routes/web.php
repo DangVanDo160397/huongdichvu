@@ -18,6 +18,16 @@ Route::get('/thoitrang','PagesController@getThoiTrang')->name('pages.thoitrang')
 Route::get('/tintuc','PagesController@getTintuc')->name('pages.tintuc');
 Route::get('tintuc/{id}/{TenKhongDau}.html','PagesController@tintuc');
 Route::get('mypham/{id}/{TenKhongDau}.html','PagesController@mypham');
+Route::get('/dangnhap','PagesController@getDangNhap')->name('pages.dangnhap');
+Route::post('/dangnhap','PagesController@postDangNhap')->name('pages.postdangnhap');
+Route::get('thongtincanhan','PagesController@getThongTin')->name('pages.thongtin');
+Route::get('doimatkhau','PagesController@doiMatKhau')->name('pages.matkhau');
+Route::post('doimatkhau','PagesController@postMatKhau')->name('pages.doimatkhau');
+Route::get('dangbai','PagesController@getDangBai')->name('pages.getdangbai');
+Route::post('dangbai','PagesController@postDangBai')->name('pages.postdangbai');
+Route::get('dangxuat','PagesController@getDangXuat')->name('pages.dangxuat');
+Route::get('gopy','PagesController@getGopY')->name('pages.getgopy');
+Route::post('gopy','PagesController@postGopY')->name('pages.postgopy');
 
 Route::group(['prefix' => 'admin','middleware' => 'admincheck'],function() {
 

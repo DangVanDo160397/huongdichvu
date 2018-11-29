@@ -43,23 +43,23 @@
                             </div>
                             <div class="form-group">
                                 <label>Tên</label>
-                                <input class="form-control" name="product_name" placeholder="Vui lòng nhập tên sản phẩm" />
+                                <input class="form-control" name="product_name" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Giá</label>
-                                <input class="form-control" name="product_price" placeholder="Vui lòng nhập giá" />
+                                <input class="form-control" name="product_price" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Số lượng</label>
-                                <input class="form-control" name="product_quantity" placeholder="Vui lòng nhập số lượng" />
+                                <input class="form-control" name="product_quantity" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Note</label>
-                                <input class="form-control" name="product_note" placeholder="Vui lòng nhập chú thích" />
+                                <input class="form-control" name="product_note" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Hiển thị</label>
-                                <input class="form-control" name="product_enable" placeholder="Vui lòng nhập hiển thị" />
+                                <input class="form-control" name="product_enable" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Mô tả</label>

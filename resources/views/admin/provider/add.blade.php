@@ -22,15 +22,15 @@
                         	<input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
                                 <label>Tên NCC</label>
-                                <input class="form-control" name="provider_name" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="provider_name" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>
-                                <input class="form-control" name="provider_address" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="provider_address" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Số điện thoại</label>
-                                <input class="form-control" name="provider_phone" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="provider_phone" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

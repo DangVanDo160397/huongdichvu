@@ -22,7 +22,7 @@
                         	<input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
                                 <label>Tên thể loại</label>
-                                <input class="form-control" name="category_name" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="category_name" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Parent</label>

@@ -16,7 +16,7 @@
                             <div class="side-B">
                                 <div class="product-desc-side">
                                     <h3><a>{{$pr->product_name}}</a></h3>
-                                    <p>{{$pr->product_description}}</p>
+                                    <p>{!! $pr->product_description !!}</p>
                                     <div class="links"><a href="thoitrang/{{$pr->product_id}}/{{$pr->product_slug_name}}.html">Đọc thêm</a></div>
                                 </div>
                             </div>

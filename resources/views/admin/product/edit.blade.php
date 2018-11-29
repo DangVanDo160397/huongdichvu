@@ -39,23 +39,23 @@
                             </div>
                             <div class="form-group">
                                 <label>Tên</label>
-                                <input class="form-control" name="product_name" value="{{$product->product_name}}" placeholder="Please Enter Username" />
+                                <input class="form-control" name="product_name" value="{{$product->product_name}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Giá</label>
-                                <input class="form-control" name="product_price" value="{{$product->product_price}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="product_price" value="{{$product->product_price}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Số lượng</label>
-                                <input class="form-control" name="product_quantity" value="{{$product->product_quantity}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="product_quantity" value="{{$product->product_quantity}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Note</label>
-                                <input class="form-control" name="product_note" value="{{$product->product_note}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="product_note" value="{{$product->product_note}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Hiển thị</label>
-                                <input class="form-control" name="product_enable" value="{{$product->product_enable}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="product_enable" value="{{$product->product_enable}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Mô tả</label>
@@ -79,11 +79,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Ngày sản xuất</label>
-                                <input class="form-control" name="product_manufacturing_date" value="{{$product->product_manufacturing_date}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="product_manufacturing_date" value="{{$product->product_manufacturing_date}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Hạn sử dụng</label>
-                                <input class="form-control" name="product_expiry_date" value="{{$product->product_expiry_date}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="product_expiry_date" value="{{$product->product_expiry_date}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="changeImage" id="changeImage" />

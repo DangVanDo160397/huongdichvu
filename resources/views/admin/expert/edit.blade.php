@@ -27,19 +27,19 @@
                         	{{csrf_field()}} {{method_field('PUT')}}
                             <div class="form-group">
                                 <label>Tên</label>
-                                <input class="form-control" name="expert_name" value="{{$expert->expert_name}}" placeholder="Please Enter Username" />
+                                <input class="form-control" name="expert_name" value="{{$expert->expert_name}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>
-                                <input class="form-control" name="expert_address" value="{{$expert->expert_address}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_address" value="{{$expert->expert_address}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Ngày sinh</label>
-                                <input class="form-control" name="expert_birth" value="{{$expert->expert_birth}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_birth" value="{{$expert->expert_birth}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" name="expert_email" value="{{$expert->expert_email}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="expert_email" value="{{$expert->expert_email}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Bằng cấp</label>

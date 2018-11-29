@@ -50,20 +50,30 @@
                                             <li><a data-hover="bản tin tư vấn"  href="{{route('pages.tintuc')}}"><span>Bản tin tư vấn</span></a></li>
                                             <li><a data-hover="mỹ phẩm"  href="{{route('pages.mypham')}}"><span>Mỹ phẩm</span></a></li>
                                             <li><a data-hover="thời trang"  href="{{route('pages.thoitrang')}}"><span>Thời trang</span></a></li>
-                                            <li><a data-hover="liên hệ" href="contact.html"><span>Liên hệ</span></a></li>
+                                            <li><a data-hover="góp ý" href="{{route('pages.getgopy')}}"><span>Góp ý</span></a></li>
                                         </ul>
 
                                     </div>
                                 </nav>
                             </div>
                             <div class="col-md-2  col-sm-4 col-xs-12 hidden-sm">
-                                <div class="text-right"><button type="button" class="book-now-btn">Đăng nhập</button></div>
+                                @if(!Auth::check())
+                                <div class="text-right"><a href="{{route('pages.dangnhap')}}"><button type="button" class="book-now-btn">Đăng nhập</button></a></div>
+                                @else
+                                    <ul>
+                                        <li><strong>Hi </strong><a href="{{route('pages.thongtin')}}">{{Auth::user()->user_name}}</a><i class="fa fa-chevron-down" style="margin-left: 5px;" aria-hidden="true"></i></i>
+                                            <ul class="menu-2">
+                                                <li><a href="{{route('pages.matkhau')}}">Đổi mật khẩu</a></li>
+                                                <li><a href="{{route('pages.getdangbai')}}">Đăng bài</a></li>
+                                                <li><a href="{{route('pages.dangxuat')}}">Đăng xuất</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                @endif
                             </div>
 
                         </div>
                     </div>
                 </div>
             </header>
-
-
             <!--end-->

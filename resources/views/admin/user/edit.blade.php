@@ -27,20 +27,20 @@
                         	{{csrf_field()}} {{method_field('PUT')}}
                             <div class="form-group">
                                 <label>Username</label>
-                                <input class="form-control" name="user_name" value="{{$user->user_name}}" placeholder="Please Enter Username" />
+                                <input class="form-control" name="user_name" value="{{$user->user_name}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" name="user_email" value="{{$user->user_email}}" placeholder="Please Enter Password" />
+                                <input class="form-control" name="user_email" value="{{$user->user_email}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="changePassword" id="changePassword" />
                                 <label>Đổi mật khẩu</label>
-                                <input type="password" class="form-control password" name="user_password" placeholder="Please Enter Category Name" disabled="" />
+                                <input type="password" class="form-control password" name="user_password" placeholder="Vui lòng nhập thông tin" disabled="" />
                             </div>
                             <div class="form-group">
                                 <label>Nhập lại mật khẩu</label>
-                                <input type="password" class="form-control password " name="user_passwordAgain" placeholder="Please Enter Category Name" disabled="" />
+                                <input type="password" class="form-control password " name="user_passwordAgain" placeholder="Vui lòng nhập thông tin" disabled="" />
                             </div>
                             <div class="form-group">
                                 <label>Ảnh</label>

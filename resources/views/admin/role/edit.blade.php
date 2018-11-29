@@ -22,7 +22,7 @@
                         	{{ csrf_field()}} {{ method_field('PUT') }}
                             <div class="form-group">
                                 <label>Tên quyền</label>
-                                <input class="form-control" name="role_name" value="{{$role->role_name}}" placeholder="Mời nhập tên thể loại" />
+                                <input class="form-control" name="role_name" value="{{$role->role_name}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

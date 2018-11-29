@@ -39,52 +39,13 @@
             <div class="clearfix"></div>
 
             <!--service block--->
-            <section class="service-block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-6 mt-25">
-                            <div class="service-details text-center">
-                                <div class="service-image">
-                                    <a href="cauhoi.html"><img alt="image" class="img-responsive" src="images/icons/user.png"></a>
-                                </div>
-                                <h4><a href="cauhoi.html">tư vấn mỹ phẩm</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-6 mt-25">
-                            <div class="service-details text-center">
-                                <div class="service-image">
-                                    <a href="cauhoi.html"><img alt="image" class="img-responsive" src="images/icons/user.png"></a>
-                                </div>
-                                <h4><a href="cauhoi.html">tư vấn thời trang</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-6 width-50">
-                            <div class="service-details text-center">
-                                <div class="service-image">
-                                    <img alt="image" class="img-responsive" src="images/icons/wifi.png">
-                                </div>
-                                <h4><a>đánh giá</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-6 mt-25">
-                            <div class="service-details text-center">
-                                <div class="service-image">
-                                    <img alt="image" class="img-responsive" src="images/icons/car.png">
-                                </div>
-                                <h4><a>liên hệ</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
 <!----resort-overview--->
                 <section class="resort-overview-block">
                     <div class="container">
                         <div class="row">
                             @foreach($article as $ar)
                                 @if($ar->article_parent_id == 1)
-                                    <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                                    <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right padd-right">
                                         <div class="side-A">
                                             <div class="product-thumb">
                                                 <div class="image">
@@ -120,7 +81,6 @@
                                 <div class="vacation-offer-details">
                                     <h1>Tư vấn thời trang</h1>
                                     <h4>Một số xu hướng thời trang hiện nay.</h4>
-                                    <button type="button" class="btn btn-default">Choose a package</button>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +106,7 @@
                                     <div class="side-B">
                                         <div class="product-desc-side">
                                             <h3><a>{{$ar->article_title}}</a></h3>
-                                            <p>{{$ar->article_description}}</p>
+                                            <p>{!! $ar->article_description !!}</p>
                                             <div class="links"><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">Đọc thêm</a></div>
                                         </div>
                                     </div>
@@ -168,8 +128,8 @@
                             <div class="gallery-image">
                                 <img class="img-responsive" src="upload/product/{{$pr->product_image}}">
                                 <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="images/room1.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>delux room</a></p>
+                                    <a class="info pop example-image-link img-responsive" href="mypham/{{$pr->product_id}}/{{$pr->product_slug_name}}.html" data-lightbox="example-1"><i class="fa fa-search" ></i></a>
+                                   <!--  <p><a>delux room</a></p> -->
                                 </div>
                             </div>
                         </div>

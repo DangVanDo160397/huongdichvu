@@ -22,7 +22,7 @@
                         	<input type="hidden" name="_token" value="{{csrf_token()}}" >
                             <div class="form-group">
                                 <label>Tiêu đề</label>
-                                <input class="form-control" name="slide_name" placeholder="Mời nhập tên slide" />
+                                <input class="form-control" name="slide_name" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Ảnh</label>
@@ -30,7 +30,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Link</label>
-                                <input class="form-control" name="slide_link" placeholder="Mời nhập link slide" />
+                                <input class="form-control" name="slide_link" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>
