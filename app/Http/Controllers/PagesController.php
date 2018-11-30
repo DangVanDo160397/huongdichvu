@@ -25,12 +25,17 @@ class PagesController extends Controller
     }
     public function index()
     {
-        $product = Product::all()->take(4);
-        $expert = Expert::all()->take(3);
-    	return view('pages.index',compact('product','expert'));
+        $product = DB::table('tblproduct')
+                ->limit(4)
+                ->get();
+        $article_mypham = DB::table('tblarticle')->where('article_parent_id', '=', 1)->limit(6)->get();
+        // var_dump($article_mypham);
+        // die();
+        $article_thoitrang = DB::table('tblarticle')->where('article_parent_id', '=', 2)->limit(6)->get();
+    	return view('pages.index',compact('product','article_mypham','article_thoitrang'));
     }
     public  function getMyPham() {
-        $product = Product::all();
+        $product = Product::orderBy('product_id','Asc')->paginate(6);
         return view('pages.mypham',compact('product'));
     }
     public  function getThoiTrang() {

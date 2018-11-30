@@ -34,7 +34,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$ct->expert_id}}</td>
                                 <td>{{$ct->expert_name}}
-                                    <p><img width="100px" src="upload/expert/{{$ct->expert_image}}"></p>
+                                    <p><img width="100px" src="{{$ct->expert_image}}"></p>
                                 </td>
                                 <td>{{$ct->expert_address}}</td>
                                 <td>{{$ct->expert_degree}}</td>

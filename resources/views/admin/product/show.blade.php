@@ -18,7 +18,7 @@
                 <p>Tên không dấu : {{$product->product_slug_name}}</p>
                 <p>Giá sản phẩm : {{$product->product_price}}</p>
                 <p>Số lượng sản phẩm :{{$product->product_quantity}}</p>
-                <p><img width="300px" src="upload/product/{{$product->product_image}}"></p>
+                <p><img width="300px" src="{{$product->product_image}}"></p>
             	<p>Id Thể loại : {{$product->product_category_id}}</p>
                 <p>Note : {{$product->product_note}}</p>
                 <p>Hiển thị : {{$product->product_enable}}</p>

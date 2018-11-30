@@ -42,28 +42,30 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
+        // echo $request->product_image;
+        // die();
         $product = new Product();
         $product->fill($request->all());
         $product->product_slug_name = changeTitle($request->product_name);
-        if($request->hasFile("product_image"))
-        {
-            $file = $request->file('product_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG" )
-            {
-                return redirect()->route('product.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/product".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/product",$Hinh);
-            $product->product_image = $Hinh;
-        }
-        else {
-            $product->product_image = "";
-        }
+        // if($request->hasFile("product_image"))
+        // {
+        //     $file = $request->file('product_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG" )
+        //     {
+        //         return redirect()->route('product.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/product".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/product",$Hinh);
+        //     $product->product_image = $Hinh;
+        // }
+        // else {
+        //     $product->product_image = "";
+        // }
         $product->save();
         return redirect()->route('product.show',$product)->with('thongbao','Thêm thành công.');
     }
@@ -117,22 +119,22 @@ class ProductController extends Controller
         ]);
         $product->fill($request->all());
         $product->product_slug_name = changeTitle($request->product_name);
-        if($request->hasFile("product_image"))
-        {
-            $file = $request->file('product_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('product.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/product".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/product",$Hinh);
-            $product->product_image = $Hinh;
-        }
+        // if($request->hasFile("product_image"))
+        // {
+        //     $file = $request->file('product_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('product.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/product".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/product",$Hinh);
+        //     $product->product_image = $Hinh;
+        // }
         $product->save();
         return redirect()->route('product.show',$product)->with('thongbao','Sửa thành công.');
     }

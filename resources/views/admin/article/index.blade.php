@@ -32,7 +32,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$al->article_id}}</td>
                                 <td>{{$al->article_title}}
-                                    <p><img width="100px" src="upload/article/{{$al->article_image}}"></p>
+                                    <p><img width="100px" src="{{$al->article_image}}"></p>
                                 </td>
                                 <td>{{$al->article_vote}}</td>
                                 <td>{{$al->article_slug_name}}</td>

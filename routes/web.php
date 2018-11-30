@@ -53,3 +53,9 @@ Route::get('/admin/login','AdminController@getLogin')->name('admin.login');
 Route::post('/admin/login','AdminController@postLogin')->name('admin.loginpost');
 Route::get('/admin/logout','AdminController@getLogout')->name('admin.logout');
 
+// Route::get('/', function() {
+//     $crawler = Goutte::request('GET', 'https://eva.vn/tu-van-mac-dep-c160.html');
+//     $crawler->filter('a.bld')->each(function ($node) {
+//       echo $node->text() . "<br>";
+//     });
+// });

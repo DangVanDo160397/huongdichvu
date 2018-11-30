@@ -43,25 +43,25 @@ class UserController extends Controller
         $user = new User();
         $user->fill($request->all());
         $user->user_password = Hash::make($user->user_password);
-        if($request->hasFile("user_image"))
-        {
-            $file = $request->file('user_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('user.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/user".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/user",$Hinh);
-            $user->user_image = $Hinh;
-        }
-        else {
-            $user->user_image = "";
-        }
+        // if($request->hasFile("user_image"))
+        // {
+        //     $file = $request->file('user_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('user.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/user".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/user",$Hinh);
+        //     $user->user_image = $Hinh;
+        // }
+        // else {
+        //     $user->user_image = "";
+        // }
         $user->save();
         return redirect()->route('user.show',$user)->with('thongbao','Thêm thành công.');
 

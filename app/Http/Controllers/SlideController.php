@@ -45,25 +45,25 @@ class SlideController extends Controller
         ]);
         $slide = new Slide();
         $slide->fill($request->all());
-        if($request->hasFile("slide_image"))
-        {
-            $file = $request->file('slide_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG" )
-            {
-                return redirect()->route('slide.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/slide".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/slide",$Hinh);
-            $slide->slide_image = $Hinh;
-        }
-        else {
-            $slide->slide_image = "";
-        }
+        // if($request->hasFile("slide_image"))
+        // {
+        //     $file = $request->file('slide_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG" )
+        //     {
+        //         return redirect()->route('slide.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/slide".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/slide",$Hinh);
+        //     $slide->slide_image = $Hinh;
+        // }
+        // else {
+        //     $slide->slide_image = "";
+        // }
         $slide->save();
         return redirect()->route('slide.show',$slide)->with('thongbao','Thêm thành công.');
     }
@@ -106,25 +106,25 @@ class SlideController extends Controller
             'slide_name.min' => 'Tiêu đề ko dưới 3 ký tự.'
         ]);
         $slide->fill($request->all());
-        if($request->hasFile("slide_image"))
-        {
-            $file = $request->file('slide_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('slide.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/slide".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/slide",$Hinh);
-            $slide->slide_image = $Hinh;
-        }
-        else {
-            $slide->slide_image = "";
-        }
+        // if($request->hasFile("slide_image"))
+        // {
+        //     $file = $request->file('slide_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('slide.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/slide".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/slide",$Hinh);
+        //     $slide->slide_image = $Hinh;
+        // }
+        // else {
+        //     $slide->slide_image = "";
+        // }
         $slide->save();
         return redirect()->route('slide.show',$slide)->with('thongbao','Thêm thành công.');
     }

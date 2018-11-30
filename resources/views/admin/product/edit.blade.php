@@ -86,12 +86,11 @@
                                 <input class="form-control" name="product_expiry_date" value="{{$product->product_expiry_date}}" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="changeImage" id="changeImage" />
-                                <label>Sửa ảnh</label>
+                                <label>Link ảnh</label>
                                 <p>
-                                    <img height="300px"  src="upload/product/{{$product->product_image}}">
+                                    <img height="300px"  src="{{$product->product_image}}">
                                 </p>
-                                <input type="file" name="product_image" disabled  class="form-control image" />
+                                <input type="text" name="product_image" value="{{$product->product_image}}" class="form-control image" />
                             </div>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

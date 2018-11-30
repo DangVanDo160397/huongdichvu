@@ -9,10 +9,7 @@
                         <div class="col-md-6">
                             <div class="social-grid">
                                 <ul class="list-unstyled text-right">
-                                    <li><a><i class="fa fa-facebook"></i></a></li>
-                                    <li><a><i class="fa fa-twitter"></i></a></li>
-                                    <li><a><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href = "https://www.facebook.com/Adivosry123-431492724053679/?modal=admin_todo_tour"><i class="fa fa-facebook"></i></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -56,8 +56,8 @@
                                 <textarea id="demo" name="article_content" class="form-control ckeditor" rows="5"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Ảnh</label>
-                                <input type="file" name="article_image" class="form-control" />
+                                <label>Link ảnh</label>
+                                <input type="text" name="article_image" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <span style="color: #ff4157;">Xin vui lòng chờ admin duyệt bài!</span>

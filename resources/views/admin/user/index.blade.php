@@ -35,7 +35,7 @@
                                 <td>{{$us->user_id}}</td>
                                 <td>{{$us->user_name}}</td>
                                 <td>{{$us->user_email}}</td>
-                                <td><p><img width="100px" src="upload/user/{{$us->user_image}}"></p></td>
+                                <td><p><img width="100px" src="{{$us->user_image}}"></p></td>
                                 <td>{{$us->user_level}}</td>
                                 <td>{{$us->user_gender}}</td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('user.show',$us)}}">Chi tiết</a></td>

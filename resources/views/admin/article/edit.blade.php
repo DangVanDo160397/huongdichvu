@@ -63,12 +63,11 @@
                                 <textarea id="demo" name="article_content"  class="form-control ckeditor" rows="5">{{$article->article_content}}</textarea>
                             </div>
                             <div class="form-group">
-                                 <input type="checkbox" name="changeImage" id="changeImage" />
-                                <label>Ảnh</label>
-                                 <p>
-                                    <img height="300px"  src="upload/article/{{$article->article_image}}">
+                                <label>Link Ảnh</label>
+                                <p>
+                                    <img height="300px" src="{{$article->article_image}}">
                                 </p>
-                                <input type="file" name="article_image" disabled value="{{$article->article_image}}" class="form-control image" />
+                                <input type="text" name="article_image" value="{{$article->article_image}}"  class="form-control image" />
                             </div>
                             <div class="form-group">
                                 <label>Hiển thị</label>

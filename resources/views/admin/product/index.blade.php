@@ -34,7 +34,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$pr->product_id}}</td>
                                 <td>{{$pr->product_name}}
-                                    <p><img width="100px" src="upload/product/{{$pr->product_image}}"></p>
+                                    <p><img width="100px" src="{{$pr->product_image}}"></p>
                                 </td>
                                 <td>{{$pr->product_slug_name}}</td>
                                 <td>{{$pr->product_price}}</td>

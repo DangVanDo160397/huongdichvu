@@ -9,13 +9,13 @@
                             <div class="side-A">
                                 <div class="product-thumb">
                                     <div class="image">
-                                        <a><img src="upload/product/{{$pr->product_image}}" class="img-responsive" alt="image"></a>
+                                        <a href="thoitrang/{{$pr->product_id}}/{{$pr->product_slug_name}}.html"><img src="{{$pr->product_image}}" class="img-responsive" alt="image"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="side-B">
                                 <div class="product-desc-side">
-                                    <h3><a>{{$pr->product_name}}</a></h3>
+                                    <h3><a href="thoitrang/{{$pr->product_id}}/{{$pr->product_slug_name}}.html">{{$pr->product_name}}</a></h3>
                                     <p>{!! $pr->product_description !!}</p>
                                     <div class="links"><a href="thoitrang/{{$pr->product_id}}/{{$pr->product_slug_name}}.html">Đọc thêm</a></div>
                                 </div>

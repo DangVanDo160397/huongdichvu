@@ -8,13 +8,13 @@
                             <div class="side-A">
                                 <div class="product-thumb">
                                     <div class="image">
-                                        <a><img src="upload/article/{{$ar->article_image}}" class="img-responsive" alt="image"></a>
+                                        <a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html"><img src="{{$ar->article_image}}" class="img-responsive" alt="image"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="side-B">
                                 <div class="product-desc-side">
-                                    <h3><a>{{$ar->article_title}}</a></h3>
+                                    <h3><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">{{$ar->article_title}}</a></h3>
                                     <p>{!!$ar->article_description!!}</p>
                                     <div class="links"><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">Đọc thêm</a></div>
                                 </div>

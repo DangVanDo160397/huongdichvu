@@ -43,19 +43,19 @@
                 <section class="resort-overview-block">
                     <div class="container">
                         <div class="row">
-                            @foreach($article as $ar)
+                            @foreach($article_mypham as $ar)
                                 @if($ar->article_parent_id == 1)
                                     <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right padd-right">
                                         <div class="side-A">
                                             <div class="product-thumb">
                                                 <div class="image">
-                                                    <a><img src="upload/article/{{$ar->article_image}}" class="img-responsive" alt="image"></a>
+                                                    <a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html"><img src="{{$ar->article_image}}" class="img-responsive" alt="image"></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="side-B">
                                             <div class="product-desc-side">
-                                                <h3><a>{{$ar->article_title}}</a></h3>
+                                                <h3><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">{{$ar->article_title}}</a></h3>
                                                 <p>{!!$ar->article_description!!}</p>
                                                 <div class="links"><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">Đọc thêm</a></div>
                                             </div>
@@ -93,19 +93,19 @@
             <section class="resort-overview-block">
                 <div class="container">
                     <div class="row">
-                        @foreach($article as $ar)
+                        @foreach($article_thoitrang as $ar)
                             @if($ar->article_parent_id == 2)
                                 <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
                                     <div class="side-A">
                                         <div class="product-thumb">
                                             <div class="image">
-                                                <a><img src="upload/article/{{$ar->article_image}}" class="img-responsive" alt="image"></a>
+                                                <a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html"><img src="{{$ar->article_image}}" class="img-responsive" alt="image"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="side-B">
                                         <div class="product-desc-side">
-                                            <h3><a>{{$ar->article_title}}</a></h3>
+                                            <h3><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">{{$ar->article_title}}</a></h3>
                                             <p>{!! $ar->article_description !!}</p>
                                             <div class="links"><a href="tintuc/{{$ar->article_id}}/{{$ar->article_slug_name}}.html">Đọc thêm</a></div>
                                         </div>
@@ -126,11 +126,7 @@
                         @foreach($product as $pr)
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="gallery-image">
-                                <img class="img-responsive" src="upload/product/{{$pr->product_image}}">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="mypham/{{$pr->product_id}}/{{$pr->product_slug_name}}.html" data-lightbox="example-1"><i class="fa fa-search" ></i></a>
-                                   <!--  <p><a>delux room</a></p> -->
-                                </div>
+                                <a href="#"><img class="img-responsive" style="width: 150px;" src="{{$pr->product_image}}"></a>
                             </div>
                         </div>
                         @endforeach

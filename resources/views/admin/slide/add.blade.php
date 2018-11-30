@@ -29,7 +29,7 @@
                                 <input type="file" name="slide_image" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label>Link</label>
+                                <label>Link ảnh</label>
                                 <input class="form-control" name="slide_link" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>

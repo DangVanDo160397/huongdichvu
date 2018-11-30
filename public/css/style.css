@@ -128,6 +128,16 @@ ul{
     width: 100%;
     z-index: 0;
 }
+.blog p{
+    padding: 15px 0px;
+    font-family: 'Lato', sans-serif;
+}
+.blog p span {
+    font-family: 'Lato', sans-serif ;
+}
+.blog img {
+    text-align: center;
+}
 #myCarousel1 .carousel-caption h1 {
     color: #fff;
     font-family: "exotc350_dmbd_btdemi-bold";
@@ -370,6 +380,7 @@ ul{
     width: 50%;
 }
 .image img {
+    height: 230px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -411,7 +422,7 @@ ul{
 }
 .product-desc-side h3 {
     border-bottom: 1px dashed #ddd;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 2px;
     padding-bottom: 10px;
@@ -478,7 +489,7 @@ footer {
     background: #162541 none repeat scroll 0 0;
     color: #ddd !important;
     margin-top: 70px;
-    padding: 50px 0 20px;
+    padding: 0px 0 20px;
 }
 .footer-details > h4 {
     font-size: 22px;

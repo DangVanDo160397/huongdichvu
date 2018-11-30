@@ -86,8 +86,8 @@
                                 <input class="form-control" name="product_expiry_date" placeholder="Vui lòng nhập hạn sử dụng" />
                             </div>
                             <div class="form-group">
-                                <label>Ảnh</label>
-                                <input type="file" name="product_image" class="form-control" />
+                                <label>Link Ảnh</label>
+                                <input type="tẽ" name="product_image" class="form-control" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>

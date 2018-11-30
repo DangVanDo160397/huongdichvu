@@ -17,7 +17,7 @@
                 <p>Tên người dùng : {{$user->user_name}}</p>
                 <p>Email : {{$user->user_email}}</p>
                 <p>Địa chỉ : {{$user->user_address}}</p>
-                <p>Image :<img width="300px" src="upload/user/{{$user->user_image}}"></p>
+                <p>Image :<img width="300px" src="{{$user->user_image}}"></p>
                 <p>Quyền : {{$user->user_level}}</p>
                 <p>Giới tính : {{$user->user_gender}}</p>
                 <p>Số điện thoại : {{$user->user_phone}}</p>

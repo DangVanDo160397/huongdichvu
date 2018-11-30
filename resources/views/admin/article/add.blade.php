@@ -44,7 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tiêu đề</label>
-                                <input class="form-control" name="article_title" placeholder="Please Enter Username" />
+                                <input class="form-control" name="article_title" placeholder="Vui lòng nhập thông tin" />
                             </div>
                             <div class="form-group">
                                 <label>Mô tả</label>
@@ -55,8 +55,8 @@
                                 <textarea id="demo" name="article_content" class="form-control ckeditor" rows="5"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Ảnh</label>
-                                <input type="file" name="article_image" class="form-control" />
+                                <label>Link Ảnh</label>
+                                <input type="text" name="article_image" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Hiển thị</label>

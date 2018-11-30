@@ -50,8 +50,8 @@
                                 <textarea id="demo" name="expert_degree" class="form-control ckeditor" rows="5"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Ảnh</label>
-                                <input type="file" name="expert_image" class="form-control" />
+                                <label>Link Ảnh</label>
+                                <input type="text" name="expert_image" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Parent</label>

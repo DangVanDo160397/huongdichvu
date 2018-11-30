@@ -13,7 +13,7 @@ class Product extends Model
         return $this->attributes['product_id'];
     }
     protected $fillable = ['product_name','product_price','product_quantity',
-                            'product_image','product_category_id','product_note',
+                            'product_image','product_category_id','product_note','product_slug_name',
                             'product_enable','product_description','product_provider_id',
                             'product_content','product_manufacturing_date','product_expiry_date'];
 

@@ -15,7 +15,7 @@
             @endif
             <div class="row">
             	<p>Tiêu đề : {{$slide->slide_name}}</p>
-                <p>Image :<img width="300px" src="upload/slide/{{$slide->slide_image}}"></p>
+                <p>Image :<img width="300px" src="{{$slide->slide_image}}"></p>
                 <p>Link ảnh : {{$slide->slide_link}}</p>
             </div>
             <!-- /.row -->

@@ -14,7 +14,7 @@
                 </div>
             @endif
             <div class="row">
-                <p><img width="300px" src="upload/article/{{$article->article_image}}"></p>
+                <p><img width="300px" src="{{$article->article_image}}"></p>
                 <p>Tiêu đề : {{$article->article_title}}</p>
                 <p>Tên không dấu : {{$article->article_slug_name}}</p>
                 <p>Mô tả : {!!$article->article_description !!}</p>

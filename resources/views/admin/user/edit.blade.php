@@ -43,8 +43,8 @@
                                 <input type="password" class="form-control password " name="user_passwordAgain" placeholder="Vui lòng nhập thông tin" disabled="" />
                             </div>
                             <div class="form-group">
-                                <label>Ảnh</label>
-                                <input type="file" name="user_image"  class="form-control" />
+                                <label>Link Ảnh</label>
+                                <input type="text" name="user_image"  class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>

@@ -35,9 +35,9 @@
                                 <td>{{$tl->category_slug_name}}</td>
                                 <td>{{$tl->category_parent_id}}</td>
                                <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{route('category.show',$tl)}}">Chi tiết</a></td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('category.destroy',$tl)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;"  style="display: inline-table;" method="POST">
+                               <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('category.destroy',$tl)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
-                                    <button  type="submit" style="background: none;border: none;">Xóa</button>
+                                    <button type="submit" style="background: none;border: none;">Xóa</button>
                                 </form></td>
                                 <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('category.edit',$tl)}}">Edit</a></td>
                             </tr>
@@ -50,16 +50,4 @@
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
-@endsection
-@section('script')
-    function alert() {
-        if(confirm("Bạn có muốn xóa không?"))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 @endsection

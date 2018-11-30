@@ -32,7 +32,7 @@
                                 <td>{{$sl->slide_id}}</td>
                                 <td>{{$sl->slide_name}}</td>
                                 <td>
-                                    <img width="200px" src="upload/slide/{{$sl->slide_image}}">
+                                    <img width="200px" src="{{$sl->slide_image}}">
                                 </td>
                                 <td>{{$sl->slide_link}}</td>
                                 <td class="center"><i class="fa fa-trash-o  fa-fw" ></i><form action="{{route('slide.destroy',$sl)}}" onsubmit="return confirm('Bạn có muốn xóa không?');" style="display: inline-table;" method="POST">

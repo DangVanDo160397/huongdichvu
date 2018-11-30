@@ -44,25 +44,25 @@ class ExpertController extends Controller
         $expert->fill($request->all());
         $expert->expert_level = 3;
         $expert->expert_password = Hash::make($expert->expert_password);
-        if($request->hasFile("expert_image"))
-        {
-            $file = $request->file('expert_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('expert.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/expert".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/expert",$Hinh);
-            $expert->expert_image = $Hinh;
-        }
-        else {
-            $expert->expert_image = "";
-        }
+        // if($request->hasFile("expert_image"))
+        // {
+        //     $file = $request->file('expert_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('expert.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/expert".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/expert",$Hinh);
+        //     $expert->expert_image = $Hinh;
+        // }
+        // else {
+        //     $expert->expert_image = "";
+        // }
         $expert->save();
         return redirect()->route('expert.show',$expert)->with('thongbao','Thêm thành công.');
     }
@@ -102,25 +102,25 @@ class ExpertController extends Controller
         $this->validate($request,[],[]);
         $expert->fill($request->all());
         $expert->expert_password = Hash::make($expert->expert_password);
-        if($request->hasFile("expert_image"))
-        {
-            $file = $request->file('expert_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('expert.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/expert".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/expert",$Hinh);
-            $expert->expert_image = $Hinh;
-        }
-        else {
-            $expert->expert_image = "";
-        }
+        // if($request->hasFile("expert_image"))
+        // {
+        //     $file = $request->file('expert_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('expert.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/expert".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/expert",$Hinh);
+        //     $expert->expert_image = $Hinh;
+        // }
+        // else {
+        //     $expert->expert_image = "";
+        // }
         $expert->save();
         return redirect()->route('expert.show',$expert)->with('thongbao','Thêm thành công.');
     }

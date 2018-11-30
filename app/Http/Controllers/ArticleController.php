@@ -46,25 +46,25 @@ class ArticleController extends Controller
         $article = new Article();
         $article->fill($request->all());
         $article->article_slug_name  = changeTitle($request->article_title);
-        if($request->hasFile("article_image"))
-        {
-            $file = $request->file('article_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('article.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/article".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/article",$Hinh);
-            $article->article_image = $Hinh;
-        }
-        else {
-            $article->article_image = "";
-        }
+        // if($request->hasFile("article_image"))
+        // {
+        //     $file = $request->file('article_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('article.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/article".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/article",$Hinh);
+        //     $article->article_image = $Hinh;
+        // }
+        // else {
+        //     $article->article_image = "";
+        // }
         $article->save();
         return redirect()->route('article.show',$article)->with('thongbao','Thêm thành công.');
     }
@@ -106,37 +106,37 @@ class ArticleController extends Controller
     {
         //cap nhap bản ghi do
         $this->validate($request,[
-            'article_title' => 'required|min:3|max:30',
+            'article_title' => 'required|min:3|max:100',
             'article_content' => 'required|min:3',
-            'article_description' => 'required|min:3|max:200',
+            'article_description' => 'required|min:3|max:500',
         ],[
             'article_title.required' => 'Tiêu đề không được để trống.',
             'article_title.min' => 'Tiêu đề không ít hơn 3 kí tự.',
-            'article_title.max' => 'Tiêu đề không được quá 30 ký tự.',
+            'article_title.max' => 'Tiêu đề không được quá 100 ký tự.',
             'article_content.required' => 'Nội Dung không được để trống.',
             'article_content.min' => 'Nội dung không ít hơn 3 kí tự.',
             'article_description.required' => 'Mô tả không được để trống.',
-            'article_description.max' => 'Mô tả không được quá 200 ký tự để trống.',
+            'article_description.max' => 'Mô tả không được quá 500 ký tự để trống.',
         ]);
         
         $article->fill($request->all());
         $article->article_slug_name = changeTitle($request->article_title);
-        if($request->hasFile("article_image"))
-        {
-            $file = $request->file('article_image');
-            $duoi = $file->getClientOriginalExtension();
-            if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
-            {
-                return redirect()->route('article.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
-            }
-            $name = $file->getClientOriginalName();
-            $Hinh = str_random(4)."_". $name;
-            while (file_exists("upload/article".$Hinh)) {
-                $Hinh = str_random(4)."_". $name;
-            }
-            $file->move("upload/article",$Hinh);
-            $article->article_image = $Hinh;
-        }
+        // if($request->hasFile("article_image"))
+        // {
+        //     $file = $request->file('article_image');
+        //     $duoi = $file->getClientOriginalExtension();
+        //     if($duoi != 'jpg' && $duoi != 'JPG'  && $duoi != 'png' && $duoi != 'PNG' && $duoi != "jpeg" && $duoi != "JPEG")
+        //     {
+        //         return redirect()->route('article.create')->with('loi','Bạn chỉ được nhập file ảnh có đuôi png,jpg,jpeg');
+        //     }
+        //     $name = $file->getClientOriginalName();
+        //     $Hinh = str_random(4)."_". $name;
+        //     while (file_exists("upload/article".$Hinh)) {
+        //         $Hinh = str_random(4)."_". $name;
+        //     }
+        //     $file->move("upload/article",$Hinh);
+        //     $article->article_image = $Hinh;
+        // }
         $article->save();
         return redirect()->route('article.show',$article)->with('thongbao','Sửa thành công.');
     }

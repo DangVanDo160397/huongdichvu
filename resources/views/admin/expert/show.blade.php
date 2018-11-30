@@ -17,7 +17,7 @@
                 <p>Tên Chuyên gia : {{$expert->expert_name}}</p>
                 <p>Địa chỉ : {{$expert->expert_address}}</p>
                 <p>Email :{{$expert->expert_email}}</p>
-                <p><img width="300px" src="upload/expert/{{$expert->expert_image}}"></p>
+                <p><img width="300px" src="{{$expert->expert_image}}"></p>
             	<p>Ngày sinh : {{$expert->expert_birth}}</p>
                 <p>Thông tin bằng cấp : {{$expert->expert_degree}}</p>
                 <p>Parent : {{$expert->expert_parent_id}}</p>
